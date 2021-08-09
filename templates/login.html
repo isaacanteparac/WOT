@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/loginStyle.css') }}">
+    <head>
+        <meta charset="utf-8">
+        <title>SyIn</title>
+        <meta name="description" content="inventary controller"/>
+        <meta name="author" content="ownertechnology"/>
+    </head>
+    <body>
+        <img class="wave" src="static/iconos/wave.png">
+       
+        <div class="container">
+            <div class="login-content">
+                <h2 id="nameSyin">SyIn</h2>
+
+                <form action="/login/verification">
+                    <img src="static/iconos/avatar.png">
+                    <h2 class="title">Welcome</h2>
+
+                    <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Mail</h5>
+                            <input type="text" class="input" name="mail">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="i"> 
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Password</h5>
+                            <input type="password" class="input" name="password">
+                        </div>
+                    </div>
+
+                    <a href="#">Forgot Password?</a>
+                    <button type="submit" class="btn">
+                        Login
+                    </button>
+                    <a id="register" href="/sign-up">Sign up</a>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="/static/controller.logic/loginLogic.js"></script>
+    </body>
+</html>

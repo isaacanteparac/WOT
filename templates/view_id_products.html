@@ -1,0 +1,48 @@
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/view_data.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/buttons.css') }}">
+
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="conatines-view">
+        <form action="/products">
+            <div class="view">
+                <img src="{{products_data.3}}">
+            </div>
+            <div class="contains-text">
+                <h4>Name</h4>
+                <p>{{products_data.1}}</p>
+            </div>
+            <div class="contains-text">
+                <h4>Code</h4>
+                <p>{{products_data.5}}</p>
+            </div>
+            <div class="contains-text">
+                <h4>Amount</h4>
+                <p>{{products_data.2}}</p>
+            </div>
+            <div class="contains-text">
+                <h4>Types products</h4>
+                <p>{{products_data.8}}</p>
+            </div>
+            <div class="contains-text">
+                <h4>Status</h4>
+                <p>{{products_data.6}}</p>
+            </div>
+            <div class="contains-text">
+                <h4>Measured units</h4>
+                <p>{{products_data.7}}</p>
+            </div>
+            <div class="contains-text">
+                <h4>Inventory methods</h4>
+                <p>{{products_data.9}}</p>
+            </div>
+            <div class="contains-text">
+                <h4>Description</h4>
+                <p>{{products_data.3}}</p>
+            </div>
+            <button type="submit" class="btn-accept">
+                Accept
+            </button>
+        </form>
+    </div>
+{% endblock %}

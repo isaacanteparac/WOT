@@ -1,0 +1,70 @@
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/view_data.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/buttons.css') }}">
+
+{% extends 'layout.html' %}
+{% block body %}
+
+    <h1>Products</h1>
+    <form action="/products/create">
+        <button type="submit"class="btn-options">
+            Create product
+        </button>
+    </form>
+
+
+    {%for products in products%}
+        <div class="views">
+                <div class="view">
+                    <img src="{{products.4}}">
+
+                </div>
+                <div class="contains-text">
+                    <h4>Name</h4>
+                    <p>{{products.1}}</p>
+                </div>
+                <div class="contains-text">
+                    <h4>Creation date</h4>
+                    <p>{{products.11}}</p>
+                </div>
+                <div class="contains-text">
+                    <h4>Code</h4>
+                    <p>{{products.5}}</p>
+                </div>
+                <div class="contains-text">
+                    <h4>Amount</h4>
+                    <p>{{products.2}}</p>
+                </div>
+                <div class="contains-text">
+                    <h4>Types products</h4>
+                    <p>{{products.8}}</p>
+                </div>
+                <div class="contains-text">
+                    <h4>Status</h4>
+                    <p>{{products.6}}</p>
+                </div>
+                <div class="contains-text">
+                    <h4>Measured units</h4>
+                    <p>{{products.7}}</p>
+                </div>
+                <div class="contains-text">
+                    <h4>Inventory methods</h4>
+                    <p>{{products.9}}</p>
+                </div>
+                <div class="contains-text">
+                    <h4>Description</h4>
+                    <div class="contains-list" id="out">
+                        <p>{{products.3}}</p>
+                    </div>
+                </div>
+                <div class="links">
+                    <button type="submit"class="btn-edit">
+                        <a href="/products/edit/{{products.0}}">Edit</a>
+                    </button>
+                    <button type="submit"class="btn-cancel">
+                        <a href="/products/delete/{{products.0}}">Delete</a>
+                    </button>
+                    
+                </div>
+        </div>
+    {% endfor %}
+{% endblock %}

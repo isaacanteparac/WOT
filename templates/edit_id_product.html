@@ -1,0 +1,87 @@
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/buttons.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/data_form.css') }}">
+
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="container_add">
+        <h1>Edit Product</h1>
+        <form action="/products/edit/update/{{products_data.0}}", method="POST">
+            <div class="input-keyboard">
+                <h4>Name</h4>
+                    <input type="text" name="name" class="input" placeholder="Name" value="{{products_data.1}}">
+            </div>
+            <div class="input-keyboard">
+                <h4>Amount</h4>
+                <input type="text" name="amount"class="input" placeholder="Amount"value="{{products_data.2}}">
+            </div>
+            <div class="input-keyboard">
+                <h4>Code</h4>
+                <input type="text" name="code"class="input" placeholder="Code" value="{{products_data.5}}">
+            </div>
+            <div class="input-keyboard">
+                <h4>Description</h4>
+                <input type="text" name="description"class="input" placeholder="Description" value="{{products_data.3}}">
+            </div>
+            <div class="input-select">
+                <h4>Status</h4>
+                <select name="id_ctl_status" class="select_options">
+                    <option class="options">{{products_data.9}}</option>
+                    {%for status in ctl_status%}
+                        <option class="options" value="{{status.0}}">{{status.1}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="input-select">
+                <h4>Category</h4>
+                <select name="id_ctl_product_etiquette" class="select_options">
+                    <option class="options">{{products_data.8}}</option>
+                    {%for product_etiquette in ctl_product_etiquette%}
+                        <option class="options" value="{{product_etiquette.0}}">{{product_etiquette.1}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="input-select">
+                <h4>Measured units</h4>
+                <select name="id_ctl_measured_units" class="select_options">
+                    <option class="options">{{products_data.10}}</option>
+                    {%for measured_units in ctl_measured_units%}
+                        <option class="options" value="{{measured_units.0}}">{{measured_units.1}} {{measured_units.2}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="input-select">
+                <h4>Types products</h4>
+                <select name="id_ctl_types_products" class="select_options">
+                    <option class="options">{{products_data.13}}</option>
+                    {%for types_products in ctl_types_products%}
+                        <option class="options" value="{{types_products.0}}">{{types_products.1}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="input-select">
+                <h4>Inventory methods</h4>
+                <select name="id_ctl_inventory_methods" class="select_options">
+                    <option class="options">{{products_data.12}}</option>
+                    {% for inventory_methods in ctl_inventory_methods %}
+                        <option class="options" value="{{inventory_methods.0}}">{{inventory_methods.1}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn-update">
+                Update
+            </button>
+        </form>
+
+        <form action="/products">
+            <button type="submit" class="btn-cancel">
+                Cancelar
+            </button>
+        </form>
+        <script type="text/javascript" src="/static/controller.logic/loginLogic.js"></script>
+    </div>
+{% endblock %}

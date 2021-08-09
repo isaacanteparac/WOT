@@ -1,0 +1,173 @@
+.btn-update{
+	padding: 5px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: radial-gradient(circle at 50% -20.71%, #ff57d2 0,
+	 #ff4edb 12.5%, #f046e3 25%, #d63feb 37.5%, #b53cf2 50%, 
+	 #8c3df9 62.5%, #4f40ff 75%, #0046ff 87.5%, #004bff 100%);
+	background-size: 200%;
+	font-size: 1.1rem;
+	color: #fff;
+	font-family:  sans-serif;
+	margin: 1rem 0.5rem;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.btn-update:hover{
+	background-position: right;
+}
+
+.btn-accept{
+	padding: 5px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: radial-gradient(circle at 62.28% 119.64%, #ffd32d 0, 
+	#ffd715 7.14%, #f6da00 14.29%, #dcdc00 21.43%, #bedc00 28.57%, 
+	#9ddb00 35.71%, #75d900 42.86%, #3ad50f 50%, #00d02a 57.14%,
+	#00cc3f 64.29%, #00c755 71.43%, #00c36a 78.57%, #00bf81 85.71%, 
+	#00bc99 92.86%, #00b9b2 100%);	
+	background-size: 200%;
+	font-size: 1.1rem;
+	color: #fff;
+	font-family:  sans-serif;
+	margin: 1rem 0.5rem;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.btn-accept:hover{
+	background-position: right;
+}
+
+
+
+
+.btn-cancel{
+	padding: 5px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: radial-gradient(circle at 50% -20.71%, 
+	#ff7f49 0, #ff6f46 16.67%, #fe5942 33.33%, #f23c3c 50%,
+	 #e50b37 66.67%, #db0036 83.33%, #d20038 100%);
+	background-size: 200%;
+	font-size: 1.1rem;
+	color: #fff;
+	font-family:  sans-serif;
+	margin: 1rem 0.5rem;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.btn-cancel:hover{
+	background-position: right;
+}
+
+.btn-options{
+	padding: 5px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(270deg, #0089f5 0, #0086fb 4.17%,
+	#0081ff 8.33%, #007cff 12.5%, #0076ff 16.67%, #006ffa 20.83%,
+	#4366f3 25%, #725dea 29.17%, #9152de 33.33%, #a945d0 37.5%, 
+	#bc37c1 41.67%, #cb26b0 45.83%, #d70e9f 50%, #e0008d 54.17%, 
+	#e5007b 58.33%, #e80069 62.5%, #e90057 66.67%, #e60045 70.83%, 
+	#e21c33 75%, #dc2e21 79.17%, #d43d07 83.33%, #ca4900 87.5%, 
+	#bf5400 91.67%, #b25d00 95.83%, #a56600 100%);	
+	background-size: 200%;
+	font-size: 1.1rem;
+	color: #fff;
+	font-family:  sans-serif;
+	margin: 1rem 0.5rem;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.btn-options:hover{
+	background-position: right;
+}
+
+.btn-edit{
+	padding: 5px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: radial-gradient(circle at 50% -20.71%, #a3a7ff 0, 
+	#7a8ffc 25%, #3c78f2 50%, #0063e8 75%, #0051de 100%);
+	background-size: 200%;
+	font-size: 1.1rem;
+	color: #fff;
+	font-family:  sans-serif;
+	margin: 1rem 0.5rem;
+	cursor: pointer;
+	transition: .5s;
+}
+.btn-edit:hover{
+	background-position: right;
+}
+
+.input-select{
+	color: #38d39f;
+	display: inline-block;
+	/*margin: 0 13%;*/
+	margin: 0 10px;
+	margin-top: 15px;
+
+}
+
+.select_options{
+	margin-top: 5px;
+	width: 200px;
+	height: 30px;
+	border: 2px solid #23956f;
+	border-radius: 20px;
+	outline: none;
+	background: #241d1c;
+	color: #288f6c;
+	font-family: sans-serif;
+	font-size: 1rem;
+}
+.options{
+	font-family: sans-serif;
+	font-size: 1rem;
+}
+
+
+#blur-create{
+    width: 99%;
+    height: 120%;
+	position: absolute;
+	top: 0.5%;
+	left: 0.5%;
+	display: none;
+}
+
+#blur-view{
+    width: 99%;
+    height: 120%;
+	position: absolute;
+	top: 0.5%;
+	left: 0.5%;
+	display: none;
+}
+
+#blur-update{
+    width: 99%;
+    height: 120%;
+	position: absolute;
+	top: 0.5%;
+	left: 0.5%;
+	display: none;
+}
+
+.efect_bur{
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	background: rgba(243,243 243,0.2);
+}
+
+

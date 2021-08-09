@@ -1,0 +1,141 @@
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/buttons.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/table.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/data_form.css') }}">
+
+
+{% extends 'layout.html' %}
+{% block body %}
+        <div class=""
+        <h1>Products</h1>
+        <form action="/products">
+            <button type="submit"class="btn-options">
+                Views
+            </button>
+        </form>
+        <form action="/products/create/">
+            <button type="submit"class="btn-options">
+                Create product
+            </button>
+        </form>
+
+        <div id="blur-create" class="efect_bur">
+            <div class="container_add">
+                <h1>Create Product</h1>
+                <form action="/create/add-products", method="POST">
+                    <div class="input-keyboard">
+                            <h4>Name</h4>
+                            <input type="text" name="name" class="input">
+                    </div>
+                    <div class="input-keyboard">
+                            <h4>Amount</h4>
+                            <input type="text" name="amount"class="input">
+                    </div>
+                    <div class="input-keyboard">
+                            <h4>Code</h4>
+                            <input type="text" name="code"class="input">
+                    </div>
+                    <div class="input-keyboard">
+                            <h4>Description</h4>
+                            <input type="text" name="description"class="input">
+                    </div>
+                    <div class="input-select">
+                        <h4>Status</h4>
+                        <select name="id_ctl_status" class="select_options">
+                            <option class="options">Active</option>
+                            <option class="options">Inactive</option>
+                        </select>
+                    </div>
+        
+                    <div class="input-select">
+                        <h4>Measured units</h4>
+                        <select name="id_ctl_types_products" class="select_options">
+                            <option class="options">g</option>
+                            <option class="options">lt</option>
+                            <option class="options">mlt</option>
+                        </select>
+                    </div>
+        
+                    <div class="input-select">
+                        
+                        <h4>Types products</h4>
+                        <select name="id_ctl_types_products" class="select_options">
+                            <option class="options">Perishable</option>
+                            <option class="options">Imperishable</option>
+                        </select>
+                    </div>
+        
+                    <div class="input-select">
+                        <h4>Inventory methods</h4>
+                        <select name="id_ctl_status" class="select_options">
+                            <option class="options">F.I.F.O</option>
+                            <option class="options">L.I.F.O</option>
+                        </select>
+                    </div>
+        
+                    <div class="input-select">
+                        <h4>Provider</h4>
+                        <select name="id_ctl_status" class="select_options">
+                            <option class="options">F.I.F.O</option>
+                            <option class="options">L.I.F.O</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-accept">
+                        Create
+                    </button>
+                </form>
+                
+                <form action="/products">
+                    <button type="submit" class="btn-cancel">
+                        Cancelar
+                    </button>
+                </form>
+                <script type="text/javascript" src="/static/controller.logic/loginLogic.js"></script>
+            </div>
+        </div>
+
+        <div class="container_table">
+            <table>
+                <thead class="title_table">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Name</td>
+                        <td>Amount</td>
+                        <td>Code</td>
+                        <td>Type products</td>
+                        <td>Description</td>
+                        <td>Picture</td>
+                        <td>status</td>
+                        <td>Measured units</td>
+                        <td>Types products</td>
+                        <td>Inventory methods</td>
+                        <td>Provider</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody class="contents_table">
+                    {%for products in products%}
+                        <tr>
+                            <td><a href="/products/view/detailed/{{products.0}}">👁️</a></td>
+                            <td><a href="/products/edit/{{products.0}}">✏️</a></td>
+                            <td>{{products.1}}</td>
+                            <td>{{products.2}}</td>
+                            <td>{{products.5}}</td>
+                            <td>{{products.8}}</td>
+                            <td><p class="text-limit">{{products.3}}</p></td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>000</td>
+                            <td>
+                                <a href="/products/delete/{{products.0}}">❌</a>
+                            </td>
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+            <script type="text/javascript" src="/static/controller.logic/loginLogic.js"></script>
+        </div>
+{% endblock %}

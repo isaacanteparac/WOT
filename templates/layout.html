@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="eng">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style_css/componentsStyle.css') }}">
+
+    <head>
+        <meta charset="utf-8">
+        <title>SYIN</title>
+        <meta name="description" content="home"/>
+        <meta name="author" content="ownertechnology"/>
+    </head>
+
+    <header class="header-class">   
+        <nav class="nav-class">
+            <ul id="menu">
+              <li><img id="menu"src="{{ url_for('static',filename='iconos/menu.ico') }}"><h3><a href="/">SYIN</a></h3>
+                <ul>
+                    <li class="menu_elem"><a href="/dashboard">Dashboard</a></li>
+                    <li class="menu_elem"><a href="/products">Products</a></li>
+                    <li class="menu_elem"><a href="/provider">Provider</a></li>
+                    <li class="menu_elem"><a href="/">Exit</a></li>
+                </ul>  
+              </li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <div class="body-class">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+  
+
+    <footer class="footer-class">
+        <a href="#">OwnerTechnology</a>
+    </footer>
+
+</html>

@@ -1,0 +1,14 @@
+usuario
+provedor
+producto
+productos_provedor
+perfil_trabajo (gerente, contador, etc)
+
+
+
+
+ctl_estado(activo, inactivo)
+ctl_unidades_medidas (poner datos en excel y pasarlos ltr)
+ctl_tipos_productos(perecible, imperecible)
+ctl_tipos_transacion(efectivo, tarjeta)
+ctl_metodos de inventario (fifo lifo)
